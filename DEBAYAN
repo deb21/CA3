@@ -1,0 +1,40 @@
+
+//  main.c
+//  Round robin scheduling with priority
+//
+//  Created by SWARA GUPTA on 05/04/18.
+//  Copyright © 2018 DEBAYAN DEY. All rights reserved.
+
+#include <iostream>
+
+struct process{
+    int arr,burst,prior,firstt,i,status,rect,burl,compt,waitingt,turnaroundt;
+}*run=NULL;
+int n,tq,tburst=0;
+struct node{
+    struct process *q;
+    struct node *next;
+}*start=NULL,*last,*cn;
+int main()
+{
+    printf("\nEnter total number of the processes you want to execute :");
+    scanf("%d",&n);
+    int pl=n; //process left
+    printf("Enter the value of time quantum :");
+    scanf("%d",&tq);
+    struct process p[n];
+    for(int i=0;i<n;i++)
+    {
+        printf("\nEnter the details of process %d ",i+1);
+        printf("\n\tArrival Time : ");
+        scanf("%d",&p[i].arr);
+        printf("\tBurst Time : ");
+        scanf("%d",&p[i].burst);
+        p[i].burl=p[i].burst;
+        printf("\tPriority : ");
+        scanf("%d",&p[i].prior);
+        p[i].i=i+1;
+        p[i].status=0;
+        p[i].rect=-1;
+        p[i].firstt=-1;
+    }
