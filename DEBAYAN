@@ -208,3 +208,23 @@ printf("\n\n Details entered are following:");;
             }
         }
     }
+printf("\n\n\nDetails after scheduling are :");
+    printf("\n _______________________________________________________________________________________________________________");
+    printf("\n|\tPROCESS\t\t|\tARRIVAL TIME\t|\tBURST TIME\t|\tPRIORITY\t|\tWAITING TIME  \t|\tTURN AROUND TIME  \t|");
+    printf("\n|_______________|___________________|_______________|_______________|___________________|_______________________|");
+    for(int i=0;i<n;i++)
+    {
+        printf("\n|\t\tP%d\t\t|\t\t%d\t\t\t|\t\t%d\t\t|\t\t%d\t\t|\t\t\t%d\t\t|\t\t\t%d\t\t\t|",p[i].i,p[i].arr,p[i].burst,p[i].prior,p[i].waitingt,p[i].turnaroundt);
+        printf("\n|_______________|___________________|_______________|_______________|___________________|_______________________|");
+    }
+    float awt=0,att=0;
+    for(int i=0;i<n;i++)
+    {
+        awt=awt+p[i].waitingt;
+        att=att+p[i].turnaroundt;
+    }
+    awt=awt/n;
+    att=att/n;
+    printf("\nAverage  waiting time = %f ",awt);
+    printf("\nAverage Turn Around Time = %f \n",att);
+}
