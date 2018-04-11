@@ -89,6 +89,35 @@ int main()
 		}
 		i = (i+1)%n;
 	}
-
-
-                    
+	
+	int tq = 2;
+	time = 0;
+	count = 0;
+	
+	cout<<"Executing Queue2"<<endl;
+	
+	i=0;
+	while(count != count2)
+	{
+		if(p[i].status == 2)
+		{
+			if(p[i].burst_time<2)
+			{
+				p[i].burst_time -= 1;
+				time += 1;
+				p[i].status = 1;
+				cout<<"Completed P"<<p[i].id<<endl;
+				count++; 
+			}
+			else
+			{
+				p[i].burst_time -= 2;
+				time += tq;
+				cout<<"Processing P"<<p[i].id<<endl;
+			}
+		}
+		i = (i+1)%n;
+	}
+			
+	return 0;
+}
