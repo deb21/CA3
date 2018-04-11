@@ -1,8 +1,6 @@
 
 //  main.c
 //  Round robin scheduling with priority
-//
-//  Created by SWARA GUPTA on 05/04/18.
 //  Copyright © 2018 DEBAYAN DEY. All rights reserved.
 
 #include <iostream>
