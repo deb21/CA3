@@ -1,6 +1,6 @@
 
 //  main.c
-//  Round robin scheduling with priority
+//  
 //  Copyright © 2018 DEBAYAN DEY. All rights reserved.
 
 #include<iostream>
